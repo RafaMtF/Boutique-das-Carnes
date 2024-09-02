@@ -1,0 +1,2403 @@
+{
+	"info": {
+		"_postman_id": "617f2740-fa24-4285-b57d-0c386c11dc82",
+		"name": "Boutique das Carnes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33001966"
+	},
+	"item": [
+		{
+			"name": "Compras",
+			"item": [
+				{
+					"name": "/compras",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id_fornecedor\": 2,\n  \"unidades_macho\": 10,\n  \"unidades_femea\": 5,\n  \"preco_arroba\": 10.50,\n  \"preco_frete\": 10,\n  \"preco_sangria\": 10,\n  \"desconto\": null,\n  \"id_documento_romaneio\": null,\n  \"id_documento_gta\": null,\n  \"id_documento_nf_compra\": null,\n  \"id_documento_nf_abate\": null,\n  \"id_documento_nfs_matadouro\": null,\n  \"id_documento_nf_retorno\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/compras/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"compras",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/compras/{id}/pagamentos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": \"2024-03-28\",\n    \"meio_pagamento\": \"PIX\",\n    \"valor\": 77777.00,\n    \"id_documento_comprovante\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/compras/1/pagamentos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"compras",
+								"1",
+								"pagamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/compras/{id}/pesagens",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"unidades\": 777,\n    \"peso\": 5000.25,\n    \"criado_em\": \"2024-04-01T01:27:51.000Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/compras/1/pesagens",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"compras",
+								"1",
+								"pesagens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/compras/{id}/carcacas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sequencial\": 1,\n    \"carregado\": false,\n    \"peso_total\": 170.50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/compras/1/carcacas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"compras",
+								"1",
+								"carcacas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/compras",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/compras/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"compras",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/compras/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idFornecedor\": 1,\n    \"status\": \"CONCLUIDA\",\n    \"unidadesMachos\": 10,\n    \"unidadeFemea\": 5,\n    \"precoArroba\": 10.50,\n    \"desconto\": null,\n    \"animaisAbatidos\": 15,\n    \"pesoTotalAbate\": 200.75,\n    \"idDocumentoRomaneio\": null,\n    \"idDocumentoGta\": null,\n    \"idDocumentoNFCompra\": null,\n    \"idDocumentoNFAbate\": null,\n    \"idDocumentoNFsMatadouro\": null,\n    \"idDocumentoNFRetorno\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/compras/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"compras",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/compras/pagamentos/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"pagamento\": [\n            {\n                \"data\": \"2024-03-28\",\n                \"meio_pagamento\": \"PIX\",\n                \"valor\": 77777.00,\n                \"id_documento_comprovante\": null\n            },\n            {\n                \"data\": \"2024-03-28\",\n                \"meio_pagamento\": \"PIX\",\n                \"valor\": 8000.00,\n                \"id_documento_comprovante\": null\n            }\n        ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/compras/pagamentos/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"compras",
+								"pagamentos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/compras/pesagens/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/compras/pesagens/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"compras",
+								"pesagens",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/compras/carcacas/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/compras/carcacas/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"compras",
+								"carcacas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/compras/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"status\": \"CANCELADA\",\n  \"unidadesMachos\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/compras/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"compras",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/compras/pagamentos/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"valor\": 10000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/compras/pagamentos/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"compras",
+								"pagamentos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/compras/pesagens/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"unidades\": 17\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/compras/pesagens/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"compras",
+								"pesagens",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/compras/carcacas/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"unidades\": 17\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/compras/carcacas/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"compras",
+								"carcacas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/compras/pagamentos/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/compras/pagamentos/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"compras",
+								"pagamentos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/compras/pesagens/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/compras/pesagens/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"compras",
+								"pesagens",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/compras/carcacas/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/compras/carcacas/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"compras",
+								"carcacas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/compras/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/compras/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"compras",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fornecedores",
+			"item": [
+				{
+					"name": "/fornecedores",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"tipo\": \"PF\",\n\t\"email\": \"exemplo@empresa.com\",\n\t\"telefone\": \"1234567890\",\n\t\"celular\": \"987654321\",\n\t\"cep\": \"12345678\",\n\t\"logradouro\": \"Rua Exemplo\",\n\t\"bairro\": \"Bairro Exemplo\",\n\t\"numero\": \"123\",\n\t\"complemento\": \"Comple\",\n\t\"estado\": \"SP\",\n\t\"cidade\": \"São Paulo\",\n\t\"ativo\": true,\n\t\"notas\": \"Notas do fornecedor\",\n\t\"pessoa\" : {\n\t\t\"cpf\": \"12304838483\",\n    \"nome\": \"João Silva\"\n\t}\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/fornecedores/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fornecedores",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/fornecedores/{id}/contatos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n\t\"nome\": \"Contato 1\",\n\t\"celular\": \"987654321\",\n\t\"cargo\": \"Cargo 1\"\n}\n\t\t\t",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/fornecedores/2/contatos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fornecedores",
+								"2",
+								"contatos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/fornecedores",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/fornecedores",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fornecedores"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "page_size",
+									"value": "5",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/fornecedores/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/fornecedores/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fornecedores",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/fornecedores/contatos/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/fornecedores/contatos/8",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fornecedores",
+								"contatos",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/fornecedores/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": []
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"pessoa\": {\n\t\t\"nome\": \"Maria\"\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{ _.baseURL }}/fornecedores/4",
+							"host": [
+								"{{ _.baseURL }}"
+							],
+							"path": [
+								"fornecedores",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/fornecedores/contatos/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"cargo\": \"Novo cargo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/fornecedores/contatos/8",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fornecedores",
+								"contatos",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/fornecedores/contatos/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/fornecedores/contatos/7",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fornecedores",
+								"contatos",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/fornecedores/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/fornecedores/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fornecedores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Documentos",
+			"item": [
+				{
+					"name": "/documentos/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"descricao\": \"Nova descricao!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/documentos/39",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"documentos",
+								"39"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/documentos/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/documentos/41",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"documentos",
+								"41"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/documentos/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/documentos/35",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"documentos",
+								"35"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/documentos/uploads",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/documentos/uploads/documento-35.png",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"documentos",
+								"uploads",
+								"documento-35.png"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/documentos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "postman-cloud:///1eef2213-07e9-4a30-a48b-ca28240a4dbd"
+								},
+								{
+									"key": "numero_referencia",
+									"value": "123"
+								},
+								{
+									"key": "descricao",
+									"value": "Documento de teste."
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/documentos",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"documentos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuários",
+			"item": [
+				{
+					"name": "/usuarios/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"senha\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/usuarios/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/usuarios/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/usuarios/13",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"usuarios",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/usuarios",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/usuarios/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/usuarios/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"usuarios",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/usuarios",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\": \"jhonE\",\r\n    \"nome\": \"jhonata\",\r\n    \"email\": \"jhonata123h@gmail.com\",\r\n    \"cargo\": \"ADMINISTRADOR\",\r\n    \"senha\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/usuarios",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\": \"usuarioJhon\",\r\n    \"senha\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Estoque",
+			"item": [
+				{
+					"name": "/estoque",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false,
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sequencial\": 1,\n    \"carregado\": true,\n    \"peso_total\": 30.50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/estoque",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"estoque"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/estoque/summary",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false,
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "User-Agent",
+								"value": "insomnia/8.6.1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sequencial\": 1,\n    \"carregado\": true,\n    \"peso_total\": 30.50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/estoque/summary",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"estoque",
+								"summary"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "clientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"tipo\": \"PF\",\n\t\"email\": \"teste@email.com\",\n\t\"telefone\": \"1234567890\",\n\t\"celular\": \"987654321\",\n\t\"cep\": \"12345678\",\n\t\"logradouro\": \"Rua Exemplo\",\n\t\"bairro\": \"Bairro Exemplo\",\n\t\"numero\": \"123\",\n\t\"complemento\": \"Comple\",\n\t\"estado\": \"SP\",\n\t\"cidade\": \"São Paulo\",\n\t\"ativo\": true,\n\t\"notas\": \"Notas do cliente\",\n\t\"pessoa\" : {\n\t\t\"cpf\": \"12309938483\",\n        \"nome\": \"Antonio Silva\"\n\t}\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/clientes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/clientes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cliente/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/clientes/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clientes/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@email.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/clientes/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clientes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "clientes/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/clientes/5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"clientes",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Despesas",
+			"item": [
+				{
+					"name": "despesas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Despesa X\",\n    \"id_categoria\": null,\n    \"id_documento_comprovante\": null,\n    \"data\": \"2024-05-13\",\n    \"valor\": 100,\n    \"criado_em\": \"2024-05-14T00:50:29.000Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/despesas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"despesas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "despesas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/despesas?startOfDateRange=2024-05-11&endOfDateRange=2024-05-14&nome=Despesa X",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"despesas"
+							],
+							"query": [
+								{
+									"key": "startOfDateRange",
+									"value": "2024-05-11"
+								},
+								{
+									"key": "endOfDateRange",
+									"value": "2024-05-14"
+								},
+								{
+									"key": "nome",
+									"value": "Despesa X"
+								},
+								{
+									"key": "searchedCategoria",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "despesas/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/despesas/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"despesas",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "despesas/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"nome\": \"Despesa X\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/despesas/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"despesas",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "despesas/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/despesas/7",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"despesas",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Despesas Categorias",
+			"item": [
+				{
+					"name": "despesas-categorias",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"salarial\",\n    \"descricao\": \"folha assalarial dos funcionários\",\n    \"cor\":  \"000000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/despesas-categorias",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"despesas-categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "despesas-categorias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/despesas-categorias/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"despesas-categorias",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "despesas-categorias/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/despesas-categorias/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"despesas-categorias",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "despesas-categorias/{id}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Nome exemplo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/despesas-categorias/20",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"despesas-categorias",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "despesas-categorias/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/despesas-categorias/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"despesas-categorias",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedidos",
+			"item": [
+				{
+					"name": "/pedidos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_cliente\": 1,\r\n    \"id_compra\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pedidos/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pedidos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/pedidos/itens/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_pedido\": 4,\r\n    \"conjunto\": \"FATO\",\r\n    \"letra\": \"A\",\r\n    \"quantidade\": 1,\r\n    \"peso\": 175,\r\n    \"preco\": 17.5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pedidos/itens/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pedidos",
+								"itens",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/pedidos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_cliente\": 1,\r\n    \"id_compra\": 2,\r\n    \"conjunto\": \"CARCACA\",\r\n    \"letra\": \"A\",\r\n    \"quantidade\": 1,\r\n    \"peso\": 175,\r\n    \"preco\": 17.5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pedidos/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pedidos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/pedidos/{id}/itens/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pedidos/itens/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pedidos",
+								"itens",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/pedidos/itens/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/itens/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"itens",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/pedidos/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_cliente\": 1,\r\n    \"id_compra\": 2,\r\n    \"conjunto\": \"CARCACA\",\r\n    \"letra\": \"A\",\r\n    \"quantidade\": 1,\r\n    \"peso\": 175,\r\n    \"preco\": 17.5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pedidos/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pedidos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/pedidos/itens/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/itens/30",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"itens",
+								"30"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Relatórios",
+			"item": [
+				{
+					"name": "/relatorios/compras-por-fornecedor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/relatorios/compras-por-fornecedor",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"relatorios",
+								"compras-por-fornecedor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/relatorios/pedidos-por-cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/relatorios/pedidos-por-cliente",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"relatorios",
+								"pedidos-por-cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/relatorios/lucro-por-compra",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/relatorios/lucro-por-compra",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"relatorios",
+								"lucro-por-compra"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3001",
+			"type": "string"
+		}
+	]
+}

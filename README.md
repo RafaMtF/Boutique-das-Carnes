@@ -33,3 +33,5 @@ Os seguintes passos devem ser seguidos para executar os components do software e
   - Executar o comando `npm install`, que instala as dependências do projeto;
   - Executar o comando `npm run dev`, que inicia a aplicação do front.
 - Navegar até o diretório `/Codigo` e executar o comando `docker-compose up back --build`, que inicia o banco de dados e a aplicação do back.
+
+.
